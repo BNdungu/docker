@@ -75,7 +75,7 @@
   ```
 
 ### Execute Command in a Running Container (`docker exec`)
-- **Usage**: Runs a command in a running container
+- **Usage**: Runs a command in a running container (Login into your docker container)
 - **Example**:
   ```bash
   docker exec -it my_container bash
