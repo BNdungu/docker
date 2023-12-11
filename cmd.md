@@ -1,5 +1,4 @@
 
-```markdown
 # Docker Commands and Flags
 
 ## Image Management
@@ -106,9 +105,5 @@
 - **Example**:
   ```bash
   docker network rm my_network
-  ```
-
-Feel free to expand this file with more commands or details as needed for your purposes!
-```
-
-You can copy and paste this content into a file named `README.md` in your project directory or repository. This README will provide a quick reference guide for Docker commands and flags related to image and container management, as well as network operations.
+  ```!
+```.
