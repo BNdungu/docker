@@ -44,8 +44,8 @@
   - `--name`: Assigns a name to the container
 
 - **Fields**:
-  - `-v, /app/node_modules`: sync content im the local directory to that in the image with an exception of node_modules. 
-  - `-v, $(pwd):/app:ro`: Make the docker conatiner read only and thus change in content is unidirectional.
+  - `-v /app/node_modules`: Sync content im the local directory to that in the image with an exception of node_modules. 
+  - `-v $(pwd):/app:ro`: Make the docker conatiner read only and thus change in content is unidirectional.
 
 ### List Containers (`docker ps`)
 - **Usage**: Lists running containers
