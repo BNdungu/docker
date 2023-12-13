@@ -35,13 +35,17 @@
 - **Usage**: Runs a command in a new container
 - **Example**:
   ```bash
-  docker run -d -v $(pwd):/app -p 8080:80 --name my_container my_image
+  docker run -d -v $(pwd):/app:ro -v /app/node_modules -p 8080:80 --name my_container my_image
   ```
 - **Flags**:
   - `-d, --detach`: Run container in background and print container ID
   - `-v, --volume`: Allow your code changes to reflect in the container without requiring a rebuild.
   - `-p, --publish`: Maps a host port to a container port
   - `--name`: Assigns a name to the container
+
+- **Fields**:
+  - `-v, /app/node_modules`: sync content im the local directory to that in the image with an exception of node_modules. 
+  - `-v, $(pwd):/app:ro`: Make the docker conatiner read only and thus change in content is unidirectional.
 
 ### List Containers (`docker ps`)
 - **Usage**: Lists running containers
