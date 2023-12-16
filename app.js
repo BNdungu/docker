@@ -7,7 +7,7 @@ app.get('/', (req,res) => {
     res.send('Hello world!')
 })
 
-app.get()
+app.get('/docker')
 
 app.listen(port, () => {
     console.log(`Server started  to listening at port ${port}`)
