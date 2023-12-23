@@ -47,6 +47,7 @@
 - **Fields**:
   - `-v /app/node_modules`: Sync content in the local directory to that in the image with an exception of node_modules. 
   - `-v $(pwd):/app:ro`: Make the docker conatiner read only and thus change in content is unidirectional.
+  - `--env-file ./.env` : Specifies an environment file (.env) for setting container environment variables.
 
 ### List Containers (`docker ps`)
 - **Usage**: Lists running containers
