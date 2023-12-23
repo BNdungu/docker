@@ -4,7 +4,7 @@ const app = express()
 const port = process.env.PORT || 3000
 
 app.get('/', (req,res) => {
-    res.send('Hello world! my name is Ndungu')
+    res.send('Hello world! my name is Nganga')
 })
 
 app.get('/docker',(req,res) => {
