@@ -91,6 +91,29 @@
   - `-i, --interactive`: Keep STDIN open even if not attached
   - `-t, --tty`: Allocate a pseudo-TTY
 
+## Volume Management
+
+### List all volumes(`docker volume ls`)
+- **Usage**: Lists all volumes created in docker containers
+- **Example**: 
+  ```bash
+  docker volume ls
+  ```
+
+### Delete a volume (`docker volume rm`)
+- **Usage**: Delete specified volumes in docker
+- **Example**: 
+  ```bash
+  docker volume rm my-volume
+  ```
+
+### Delete volumes (`docker volume prune`)
+- **Usage**: Remove all unecessary volumes
+- **Example**: 
+  ```bash
+  docker volume prune
+  ```
+
 ## Network Management
 
 ### List Networks (`docker network ls`)
