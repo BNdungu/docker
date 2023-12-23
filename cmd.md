@@ -35,12 +35,13 @@
 - **Usage**: Runs a command in a new container
 - **Example**:
   ```bash
-  docker run -d -v $(pwd):/app:ro -v /app/node_modules -p 8080:80 --name my_container my_image
+  docker run -d -v $(pwd):/app:ro -v /app/node_modules --env-file ./.env -p 8080:80 --name my_container my_image
   ```
 - **Flags**:
   - `-d, --detach`: Run container in background and print container ID
   - `-v, --volume`: Allow your code changes to reflect in the container without requiring a rebuild.
   - `-p, --publish`: Maps a host port to a container port
+  - `--env` : Environmant variable
   - `--name`: Assigns a name to the container
 
 - **Fields**:
