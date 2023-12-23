@@ -1,6 +1,3 @@
-
----
-
 # Using Docker Compose
 
 Docker Compose is a tool for defining and running multi-container Docker applications. It uses a YAML file to configure the application's services and streamlines the process of managing these services as a single unit.
@@ -90,4 +87,3 @@ The [Compose file reference](https://docs.docker.com/compose/compose-file/) prov
 - **Testing Environments:** Easily set up and tear down test environments with specific configurations.
 - **Production Deployment:** Streamline deployment processes by defining services, networks, and configurations in a single file.
 
----
