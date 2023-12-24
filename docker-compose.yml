@@ -6,3 +6,9 @@ services:
       - "3000:6000"
     environment:
       - PORT=6000
+    
+  mongo:
+    image: mongo
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=ndungu
+      - MONGO_INITDB_ROOT_PASSWORD=ndungu11
