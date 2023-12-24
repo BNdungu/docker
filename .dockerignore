@@ -5,3 +5,8 @@ Dockerfile
 .dockerignore
 README.md
 cmd.md
+docker-compose-dev.yml
+docker-compose-prod.yml
+docker-compose.backup.yml
+docker-compose.yml
+docker-compose.md
