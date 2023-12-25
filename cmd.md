@@ -144,6 +144,13 @@
   docker network create my_network
   ```
 
+### Inspect a Network (`docker network inspect`)
+- **Usage**: Show network details to a network of containers
+- **Example**:
+  ```bash
+  docker network inspect my_network
+  ```
+
 ### Remove a Network (`docker network rm`)
 - **Usage**: Removes a network
 - **Example**:
