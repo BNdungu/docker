@@ -3,7 +3,7 @@ services:
   node-app:
     build: .
     ports:
-      - "3000:6000"
+      - "4000:6000"
     environment:
       - PORT=6000
     
@@ -12,3 +12,11 @@ services:
     environment:
       - MONGO_INITDB_ROOT_USERNAME=ndungu
       - MONGO_INITDB_ROOT_PASSWORD=ndungu11
+    volumes: 
+      - mongodb:/data/db
+    ports:
+      - "6000:27017"
+
+
+volumes:
+  mongodb:
