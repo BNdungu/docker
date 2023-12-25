@@ -1,10 +1,11 @@
 const express = require('express')
 const mongoose = require('mongoose')
+const {MONGO_IP,MONGO_PASSWORD,MONGO_PORT,MONGO_USER} = require('./config/config')
 
 const app = express()
 const port = process.env.PORT || 3000
 
-mongoose.connect('mongodb://ndungu:ndungu11@mongo:27017/?authMechanism=DEFAULT')
+mongoose.connect(`mongodb://${MONGO_USER}:${MONGO_PASSWORD}@${MONGO_IP}:${MONGO_PORT}/?authMechanism=DEFAULT`)
   .then(() => console.log('Connected to the DB successfully'))
   .catch((error) => console.log(error))
 
