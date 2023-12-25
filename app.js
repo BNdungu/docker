@@ -5,9 +5,16 @@ const {MONGO_IP,MONGO_PASSWORD,MONGO_PORT,MONGO_USER} = require('./config/config
 const app = express()
 const port = process.env.PORT || 3000
 
-mongoose.connect(`mongodb://${MONGO_USER}:${MONGO_PASSWORD}@${MONGO_IP}:${MONGO_PORT}/?authMechanism=DEFAULT`)
-  .then(() => console.log('Connected to the DB successfully'))
-  .catch((error) => console.log(error))
+const connectWithRetry = () => {
+  mongoose
+  .connect(`mongodb://${MONGO_USER}:${MONGO_PASSWORD}@${MONGO_IP}:${MONGO_PORT}/?authMechanism=DEFAULT`)
+    .then(() => console.log('Connected to the DB successfully'))
+    .catch((error) => {
+      console.log(error)
+      setTimeout(connectWithRetry, 5000)
+    }
+    )
+}
 
 app.get('/', (req,res) => {
     res.send('Hello world! my name is Nganga Ndungu')
@@ -20,3 +27,5 @@ app.get('/docker',(req,res) => {
 app.listen(port, () => {
     console.log(`Server started  to listening at port ${port}`)
 })
+
+connectWithRetry()
