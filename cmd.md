@@ -65,6 +65,20 @@
   docker stop my_container
   ```
 
+### Show Logs (`docker logs `)
+- **Usage**: Show log outputs from a running service in a container
+- **Example**:
+  ```bash
+  docker logs my_container -f
+  ```
+- **Flags**:
+  - `    --details`:        Show extra details provided to logs
+  - `-f, --follow`:        Follow log output
+  - `    --since string`:   Show logs since timestamp (e.g. "2013-01-02T13:23:37Z") or relative (e.g. "42m" for 42 minutes)
+  - `-n, --tail string`:    Number of lines to show from the end of the logs (default "all")
+  - `-t, --timestamps`:     Show timestamps
+  - `    --until string`:   Show logs before a timestamp (e.g. "2013-01-02T13:23:37Z") or relative (e.g. "42m" for 42 minutes)
+
 ### Remove Container (`docker rm`)
 - **Usage**: Removes a container
 - **Example**:
