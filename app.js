@@ -16,6 +16,7 @@ const connectWithRetry = () => {
     )
 }
 
+// setup a get route
 app.get('/', (req,res) => {
     res.send('Hello world! my name is Nganga Ndungu')
 })
