@@ -18,7 +18,7 @@ const connectWithRetry = () => {
 
 // setup a get route
 app.get('/', (req,res) => {
-    res.send('Hello world! my name is Nganga Ndungu')
+    res.send('Hello world!')
 })
 
 app.get('/docker',(req,res) => {
